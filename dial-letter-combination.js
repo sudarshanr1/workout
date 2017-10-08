@@ -40,7 +40,6 @@ function getPossibilities(digits, dials, outPut, pos, res) {
     if (dials[digits.charAt(pos)] !== undefined) {
         dials[digits.charAt(pos)].forEach(function(element) {
             res+=element;
-            console.log(res);
             getPossibilities(digits, dials, outPut, pos+1, res);
             res = res.slice(0, res.length-1)
         });
